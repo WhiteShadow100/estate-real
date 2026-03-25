@@ -31,19 +31,19 @@ const ListingDetail = () => {
     
     function getPropertyDetail(){
         APICall<IResponse<{property_detail:IPropertyDetail}>>({
-        url: `/listings/${id}`,
-        method: "GET",
-        successCallback: (res) => {
-            console.log("Data => ", res)
-            if(res.error_code == 0){
-                const data = res.data;
-                
-                setPropertyDetail(data.property_detail)
-                return
+            url: `/listings/${id}`,
+            method: "GET",
+            successCallback: (res) => {
+                console.log("Data => ", res)
+                if(res.error_code == 0){
+                    const data = res.data;
+                    
+                    setPropertyDetail(data.property_detail)
+                    return
+                }else{
+                    navigate('/listings');
+                }
             }
-
-            navigate('/listings');
-        }
         });
     }
 
