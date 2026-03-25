@@ -39,6 +39,7 @@ const ListingDetail = () => {
                 const data = res.data;
                 
                 setPropertyDetail(data.property_detail)
+                return
             }
 
             navigate('/listings');
