@@ -1,4 +1,4 @@
-CREATE TABlE tbl_property (
+CREATE TABlE IF NOT EXISTS tbl_property (
     uid UUID DEFAULT gen_random_uuid(),
     id SERIAL,
 

@@ -14,7 +14,7 @@ services:
     build: ./api
     image: api-image
     container_name: api
-    restart: always
+    # restart: always
     ports:
       - "8000:8000"
     depends_on:

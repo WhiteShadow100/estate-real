@@ -6,6 +6,7 @@ async def migrate():
     BASE_DIR = Path("./")
 
     sql_files = list(BASE_DIR.rglob("*.sql"))
+    sql_files = sorted(sql_files)
 
     conn = await connect_db()
 

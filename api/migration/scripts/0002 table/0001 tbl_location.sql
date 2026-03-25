@@ -1,4 +1,4 @@
-CREATE TABlE tbl_location (
+CREATE TABlE IF NOT EXISTS tbl_location (
     uid UUID DEFAULT gen_random_uuid(),
     id SERIAL,
     

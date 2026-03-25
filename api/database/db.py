@@ -4,7 +4,7 @@ DATABASE_CONFIG = {
     "user": "postgres",
     "password": "12345",
     "database": "techkraft_db",
-    "host": "localhost",
+    "host": "db",
     "port": 5432
 }
 
