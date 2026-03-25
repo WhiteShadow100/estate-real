@@ -106,21 +106,7 @@ async def listings(id: int):
     conn = await connect_db()
     
     
-    query_validate = """
-    SELECT EXISTS (
-        SELECT 1
-        FROM tbl_property
-        WHERE status = 'ACTIVE'::enum_status
-        AND id = $1
-    )
-    """
-    is_property_valid = await conn.fetchval(query_validate, id)
-    
-    if not is_property_valid:
-        return Response(
-            error_code=1,
-            data = {}
-        )
+
     
     
     # holds query for getting property detail data
