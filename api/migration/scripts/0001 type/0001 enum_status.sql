@@ -1,0 +1,1 @@
+CREATE TYPE enum_status AS ENUM ('ACTIVE', 'INACTIVE', 'DELETED');
